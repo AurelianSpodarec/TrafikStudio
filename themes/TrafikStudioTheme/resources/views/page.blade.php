@@ -8,7 +8,6 @@
 <?php
     //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
     $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\";
-    $count = 0;
     
 ?>
 
@@ -17,15 +16,15 @@
 @while ( have_rows( 'flexible_content' ) ) <?php the_row(); ?>
 
 
-    {{-- @if ( have_rows( 'row' ) )
+    @if ( have_rows( 'row' ) )
     @while ( have_rows( 'row' ) ) <?php the_row(); ?>
-    <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" gutter="{{ $page[$count]['gutter']}}" container="{{ $page[$count]['container'] }}">
+    {{-- <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" gutter="{{ $page[$count]['gutter']}}" container="{{ $page[$count]['container'] }}">
 
-
+--}}
         @if ( have_rows( 'column' ) )
         @while ( have_rows( 'column' ) ) <?php the_row(); ?>
-        <div class="{{ $page[$count]['columnWidth'] }}">
-
+        {{--  <div class="{{ $page[$count]['columnWidth'] }}"> --}}
+         <div>
 
             <?php 
                 $layout = get_row_layout();
@@ -35,18 +34,16 @@
 
             @if( file_exists( $file ))
                 @include('blocks.' . $layoutConverted)
-            @endif
-
+            @endif 
 
         </div>
         @endwhile
         @endif
         
     
-    </x-section>
+    {{--  </x-section> --}}
     @endwhile
     @endif
-    <?php $count++; ?> --}}
 
 
 @endwhile

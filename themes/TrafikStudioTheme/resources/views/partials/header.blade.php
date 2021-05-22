@@ -1,4 +1,6 @@
 <header>
+<div class="px-10">
+
   <a href="{{ home_url('/') }}">
     {{ $siteName }}
   </a>
@@ -17,4 +19,7 @@
       ]) !!}
     @endif
   </nav>
+
+
+</div>
 </header>
