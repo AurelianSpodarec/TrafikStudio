@@ -1,0 +1,72 @@
+// ==========================================================================
+// # Fonts
+// ==========================================================================
+//
+//
+//  - Buenos Aires
+//
+//
+
+ 
+// # Fonts: Buenos Aires
+// ==========================================================================
+
+@font-face{
+    font-family: Buenos Aires;
+    src:
+        url(../fonts/BuenosAires/BuenosAiresWeb-Light.woff2) format("woff2"),
+        url(../fonts/BuenosAires/BuenosAiresWeb-Light.woff) format("woff");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap
+}
+
+@font-face{
+    font-family: Buenos Aires;
+    src:
+        url(../fonts/BuenosAires/BuenosAiresWeb-LightItalic.woff2) format("woff2"),
+        url(../fonts/BuenosAires/BuenosAiresWeb-LightItalic.woff) format("woff");
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap
+}
+
+@font-face{
+    font-family: Buenos Aires;
+    src:
+        url(../fonts/BuenosAires/BuenosAiresWeb-Regular.woff2) format("woff2"),
+        url(../fonts/BuenosAires/BuenosAiresWeb-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap
+}
+
+@font-face{
+    font-family: Buenos Aires;
+    src:
+        url(../fonts/BuenosAires/BuenosAiresWeb-RegularItalic.woff2) format("woff2"),
+        url(../fonts/BuenosAires/BuenosAiresWeb-RegularItalic.woff) format("woff");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap
+}
+
+@font-face{
+    font-family: Buenos Aires;
+    src:
+        url(../fonts/BuenosAires/BuenosAiresWeb-Bold.woff2) format("woff2"),
+        url(../fonts/BuenosAires/BuenosAiresWeb-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap
+}
+
+@font-face{
+    font-family: Buenos Aires;
+    src:
+        url(../fonts/BuenosAires/BuenosAiresWeb-BoldItalic.woff2) format("woff2"),
+        url(../fonts/BuenosAires/BuenosAiresWeb-BoldItalic.woff) format("woff");
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap
+}

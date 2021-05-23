@@ -1,25 +1,35 @@
-<header>
-<div class="px-10">
+<header class="header mt-6">
+<div class="px-10 py-8 flex items-center">
 
-  <a href="{{ home_url('/') }}">
-    {{ $siteName }}
-  </a>
+    <a class="text-white" href="{{ home_url('/') }}">
+        {{ $siteName }}
+    </a>
 
 
-  <button>
+  <button class="js-toggle-menu">
     <span>Menu</span>
   </button>
 
-  <nav>
+    <nav id="desktop-nav" class="header__desktop-nav">
     @if (has_nav_menu('main_menu'))
-      {!! wp_nav_menu([
+        {!! wp_nav_menu([
         'theme_location' => 'main_menu', 
-        'menu_class' => 'main_menu', 
+        'menu_class' => 'header__desktop-menu', 
         'echo' => false
-      ]) !!}
+        ]) !!}
     @endif
-  </nav>
+    </nav>
 
 
 </div>
 </header>
+
+    <nav id="mobile-nav" class="header__mobile-nav">
+    @if (has_nav_menu('main_menu'))
+        {!! wp_nav_menu([
+        'theme_location' => 'main_menu', 
+        'menu_class' => 'header__mobile-menu', 
+        'echo' => false
+        ]) !!}
+    @endif
+    </nav>
