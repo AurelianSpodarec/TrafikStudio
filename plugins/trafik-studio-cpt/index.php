@@ -23,7 +23,32 @@
 //
 
 
-
+// function wporg_register_taxonomy_services_category() {
+// 	$labels = array(
+// 		'name'              => _x( 'Services', 'taxonomy general name' ),
+// 		'singular_name'     => _x( 'Course', 'taxonomy singular name' ),
+// 		'search_items'      => __( 'Search Services' ),
+// 		'all_items'         => __( 'All Services' ),
+// 		'parent_item'       => __( 'Parent Course' ),
+// 		'parent_item_colon' => __( 'Parent Course:' ),
+// 		'edit_item'         => __( 'Edit Course' ),
+// 		'update_item'       => __( 'Update Course' ),
+// 		'add_new_item'      => __( 'Add New Course' ),
+// 		'new_item_name'     => __( 'New Course Name' ),
+// 		'menu_name'         => __( 'Course' ),
+// 	);
+// 	$args   = array(
+// 		'hierarchical'      => true, // make it hierarchical (like categories)
+// 		'labels'            => $labels,
+// 		'show_ui'           => true,
+// 		'show_admin_column' => true,
+// 		'query_var'         => true,
+// 		'show_in_rest' => true,
+// 		'rewrite'           => [ 'slug' => 'services' ],
+// 	);
+// 	register_taxonomy( 'service_category', array('services'), $args );
+// }
+// add_action( 'init', 'wporg_register_taxonomy_services_category' );
 // ==========================================================================
 // CustomPostTypes: Work
 // ==========================================================================
@@ -94,6 +119,34 @@ add_action( 'init', 'create_work_cpt', 0 );
 function create_service_cpt() {
 
 	$labels = array(
+		'name'              => _x( 'Services', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Service Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Services' ),
+		'all_items'         => __( 'All Services' ),
+		'parent_item'       => __( 'Parent Service Category' ),
+		'parent_item_colon' => __( 'Parent Service Category:' ),
+		'edit_item'         => __( 'Edit Service Category' ),
+		'update_item'       => __( 'Update Service Category' ),
+		'add_new_item'      => __( 'Add New Service Category' ),
+		'new_item_name'     => __( 'New Service Category Name' ),
+		'menu_name'         => __( 'Service Category' ),
+	);
+	$args   = array(
+		'hierarchical'      => true, // make it hierarchical (like categories)
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'show_in_rest' 		=> true,
+		'rewrite'           => [ 'slug' => 'services' ],
+	);
+	register_taxonomy( 'service_category', ['services'], $args );
+	
+
+	unset($labels);
+	unset($args);
+
+	$labels = array(
 		'name' => _x( 'Services', 'Post Type General Name', 'sage' ),
 		'singular_name' => _x( 'Service', 'Post Type Singular Name', 'sage' ),
 		'menu_name' => _x( 'Services', 'Admin Menu text', 'sage' ),
@@ -122,13 +175,14 @@ function create_service_cpt() {
 		'items_list_navigation' => __( 'Services list navigation', 'sage' ),
 		'filter_items_list' => __( 'Filter Services list', 'sage' ),
 	);
+
 	$args = array(
-		'label' => __( 'Service', 'sage' ),
+		'label' => $labels,
 		'description' => __( '', 'sage' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-text-page',
-		'supports' => array(),
-		'taxonomies' => array(),
+		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'post-formats', 'custom-fields' ),
+		// 'taxonomies' => array( 'services_category' ),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
@@ -139,11 +193,27 @@ function create_service_cpt() {
 		'has_archive' => true,
 		'hierarchical' => false,
 		'exclude_from_search' => false,
+		'rewrite' => array( 'slug' => 'services/%service_category%'),
 		'show_in_rest' => true,
 		'publicly_queryable' => true,
 		'capability_type' => 'post',
 	);
-	register_post_type( 'service', $args );
+	register_post_type( 'services', $args );
 
 }
 add_action( 'init', 'create_service_cpt', 0 );
+
+function wpa_service_category_post_link( $post_link, $id = 0 ){
+    $post = get_post($id);  
+    if ( is_object( $post ) ){
+        $terms = wp_get_object_terms( $post->ID, 'service_category' );
+        if( $terms ){
+            return str_replace( '%service_category%' , $terms[0]->slug , $post_link );
+        }
+    }
+    return $post_link;  
+}
+add_filter( 'post_type_link', 'wpa_service_category_post_link', 1, 3 );
+
+
+
