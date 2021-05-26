@@ -1,5 +1,5 @@
 <x-section>
-<div class="flex">
+<div class="flex px-10">
 
 
     <?php
@@ -12,7 +12,7 @@
     <?php if ( $the_query->have_posts() ) : ?>
 
         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <article class="w-full md:w-1/3">
+        <article class="w-full md:w-1/3 first:ml-0 md:ml-5">
 
             <a href="<?php echo get_permalink(); ?>">
                 <img src="" alt="" />
@@ -20,8 +20,8 @@
             </a>
 
             <header>
-                <span>A <span>3minute</span> read by <a href="">Company</a>
-                <h2>
+                <span>A <span class="font-bold">3minute</span> read by <a href="" class="color-red hover:underline">Company</a>
+                <h2 class="font-bold text-3xl">
                 <a href="<?php echo get_permalink(); ?>">
                     <?php the_title(); ?>
                 </a>

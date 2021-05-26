@@ -27,6 +27,12 @@ class App extends Composer
         ];
     }
 
+    public function currentYear()
+    {
+        return date("Y");
+    }
+
+
     /**
      * Returns the site name.
      *
