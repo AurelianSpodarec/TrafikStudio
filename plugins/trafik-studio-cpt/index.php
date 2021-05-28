@@ -56,6 +56,34 @@
 function create_work_cpt() {
 
 	$labels = array(
+		'name'              => _x( 'Client', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Client Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Clients' ),
+		'all_items'         => __( 'All Clients' ),
+		'parent_item'       => __( 'Parent Client Category' ),
+		'parent_item_colon' => __( 'Parent Client Category:' ),
+		'edit_item'         => __( 'Edit Client Category' ),
+		'update_item'       => __( 'Update Client Category' ),
+		'add_new_item'      => __( 'Add New Client Category' ),
+		'new_item_name'     => __( 'New Client Category Name' ),
+		'menu_name'         => __( 'Client Category' ),
+	);
+	$args   = array(
+		'hierarchical'      => true, // make it hierarchical (like categories)
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'show_in_rest' 		=> true,
+		// 'rewrite'           => [ 'slug' => 'work' ],
+	);
+	register_taxonomy( 'client_category', ['cpt_work'], $args );
+	
+
+	unset($labels);
+	unset($args);
+
+	$labels = array(
 		'name' => _x( 'Work', 'Post Type General Name', 'sage' ),
 		'singular_name' => _x( 'Work', 'Post Type Singular Name', 'sage' ),
 		'menu_name' => _x( 'Work', 'Admin Menu text', 'sage' ),
@@ -89,8 +117,8 @@ function create_work_cpt() {
 		'description' => __( '', 'sage' ),
 		'labels' => $labels,
 		'menu_icon' => 'dashicons-open-folder',
-		'supports' => array(),
-		'taxonomies' => array(),
+		'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'post-formats', 'format', 'custom-fields' ),
+		'taxonomies' => array('client_category'),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
@@ -98,11 +126,12 @@ function create_work_cpt() {
 		'show_in_admin_bar' => true,
 		'show_in_nav_menus' => true,
 		'can_export' => true,
-		'has_archive' => true,
+		'has_archive' => false,
 		'hierarchical' => false,
 		'exclude_from_search' => false,
 		'show_in_rest' => true,
 		'publicly_queryable' => true,
+		// 'rewrite'           => [ 'slug' => 'work' ],
 		'capability_type' => 'post',
 	);
 	register_post_type( 'work', $args );
@@ -191,7 +220,7 @@ function create_service_cpt() {
 		'show_in_nav_menus' => true,
 		'can_export' => true,
 		'has_archive' => true,
-		'hierarchical' => false,
+		'hierarchical' => true,
 		'exclude_from_search' => false,
 		'rewrite' => array( 'slug' => 'services/%service_category%'),
 		'show_in_rest' => true,
@@ -216,4 +245,14 @@ function wpa_service_category_post_link( $post_link, $id = 0 ){
 add_filter( 'post_type_link', 'wpa_service_category_post_link', 1, 3 );
 
 
-
+// function wpa_client_category_post_link( $post_link, $id = 0 ){
+//     $post = get_post($id);  
+//     if ( is_object( $post ) ){
+//         $terms = wp_get_object_terms( $post->ID, 'client_category' );
+//         if( $terms ){
+//             return str_replace( '%client_category%' , $terms[0]->slug , $post_link );
+//         }
+//     }
+//     return $post_link;  
+// }
+// add_filter( 'post_type_link', 'wpa_client_category_post_link', 1, 3 );

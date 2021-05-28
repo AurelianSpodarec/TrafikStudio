@@ -24,18 +24,3 @@
 </div>
 </div>
 </x-section>
-
-Add Client: X, Y, X to each work
-
-Thumbnail
-Title
-Custom Hero section
-
-
-Custom pages
-
-Sidebar - custom section and 'view site' link
-
-
-
-Next Project at the bottom
