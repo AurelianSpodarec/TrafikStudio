@@ -46,7 +46,7 @@
 // 		'show_in_rest' => true,
 // 		'rewrite'           => [ 'slug' => 'services' ],
 // 	);
-// 	register_taxonomy( 'service_category', array('services'), $args );
+// 	register_taxonomy( 'service_type', array('services'), $args );
 // }
 // add_action( 'init', 'wporg_register_taxonomy_services_category' );
 // ==========================================================================
@@ -169,7 +169,7 @@ function create_service_cpt() {
 		'show_in_rest' 		=> true,
 		'rewrite'           => [ 'slug' => 'services' ],
 	);
-	register_taxonomy( 'service_category', ['services'], $args );
+	register_taxonomy( 'service_type', ['services'], $args );
 	
 
 	unset($labels);
@@ -222,7 +222,7 @@ function create_service_cpt() {
 		'has_archive' => true,
 		'hierarchical' => true,
 		'exclude_from_search' => false,
-		'rewrite' => array( 'slug' => 'services/%service_category%'),
+		'rewrite' => array( 'slug' => 'services/%service_type%'),
 		'show_in_rest' => true,
 		'publicly_queryable' => true,
 		'capability_type' => 'post',
@@ -232,17 +232,17 @@ function create_service_cpt() {
 }
 add_action( 'init', 'create_service_cpt', 0 );
 
-function wpa_service_category_post_link( $post_link, $id = 0 ){
+function wpa_service_type_post_link( $post_link, $id = 0 ){
     $post = get_post($id);  
     if ( is_object( $post ) ){
-        $terms = wp_get_object_terms( $post->ID, 'service_category' );
+        $terms = wp_get_object_terms( $post->ID, 'service_type' );
         if( $terms ){
-            return str_replace( '%service_category%' , $terms[0]->slug , $post_link );
+            return str_replace( '%service_type%' , $terms[0]->slug , $post_link );
         }
     }
     return $post_link;  
 }
-add_filter( 'post_type_link', 'wpa_service_category_post_link', 1, 3 );
+add_filter( 'post_type_link', 'wpa_service_type_post_link', 1, 3 );
 
 
 // function wpa_client_category_post_link( $post_link, $id = 0 ){
