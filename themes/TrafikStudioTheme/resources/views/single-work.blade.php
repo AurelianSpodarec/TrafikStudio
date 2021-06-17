@@ -1,57 +1,67 @@
-single-work.blade.php
-
-
 @extends('layouts.app')
 @section('content')
 
-{{--    
-    {{-- $flexibleContentPath = dirname(__FILE__) . '\\blocks\\'; --}}
-{{-- $flexibleContentPath = " /var/www/html" --}}
 
-<?php
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
-    $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\";
-    
-?>
+    <?php the_title(); ?>
+    <?php the_content(); ?>
+    <?php echo get_the_date(); ?>
 
 
-@if ( have_rows( 'flexible_content' ) ) 
-@while ( have_rows( 'flexible_content' ) ) <?php the_row(); ?>
+ 
+
+    {{--    
+        {{-- $flexibleContentPath = dirname(__FILE__) . '\\blocks\\'; --}}
+    {{-- $flexibleContentPath = " /var/www/html" --}}
+
+    <?php
+
+        //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
+        $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\";
+        
+    ?>
 
 
-    @if ( have_rows( 'row' ) )
-    @while ( have_rows( 'row' ) ) <?php the_row(); ?>
-    {{-- <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" gutter="{{ $page[$count]['gutter']}}" container="{{ $page[$count]['container'] }}">
+    @if ( have_rows( 'flexible_content' ) ) 
+    @while ( have_rows( 'flexible_content' ) ) <?php the_row(); ?>
 
---}}
-        @if ( have_rows( 'column' ) )
-        @while ( have_rows( 'column' ) ) <?php the_row(); ?>
-        {{--  <div class="{{ $page[$count]['columnWidth'] }}"> --}}
-         <div>
 
-            <?php 
-                $layout = get_row_layout();
-                $layoutConverted = str_replace( '_', '-', $layout);
-                $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );
-            ?>
+        @if ( have_rows( 'row' ) )
+        @while ( have_rows( 'row' ) ) <?php the_row(); ?>
+        {{-- <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" gutter="{{ $page[$count]['gutter']}}" container="{{ $page[$count]['container'] }}">
 
-            @if( file_exists( $file ))
-                @include('blocks.' . $layoutConverted)
-            @endif 
+    --}}
+            @if ( have_rows( 'column' ) )
+            @while ( have_rows( 'column' ) ) <?php the_row(); ?>
+            {{--  <div class="{{ $page[$count]['columnWidth'] }}"> --}}
+            <div>
 
-        </div>
+                <?php 
+                    $layout = get_row_layout();
+                    $layoutConverted = str_replace( '_', '-', $layout);
+                    $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );
+                ?>
+
+                @if( file_exists( $file ))
+                    @include('blocks.' . $layoutConverted)
+                @endif 
+
+            </div>
+            @endwhile
+            @endif
+            
+        
+        {{--  </x-section> --}}
         @endwhile
         @endif
-        
-    
-    {{--  </x-section> --}}
+
+
     @endwhile
     @endif
 
-
-@endwhile
-@endif
-
+<?php endwhile; ?>
+<?php endif; ?>
+ 
 
 @endsection
