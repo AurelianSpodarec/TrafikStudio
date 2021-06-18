@@ -1,14 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
-page.blade.php
+{{-- page.blade.php --}}
 
 <?php
     //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
     $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\"; 
 ?>
-
-
 
 
 @if ( have_rows( 'flexible_content' ) ) 

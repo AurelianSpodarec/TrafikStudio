@@ -29,10 +29,18 @@
                     <p class="work-item__cta">View Project</p>
                 </div>
 
-                <img class="work-item__img js-lazy is-active" src="https://d2jd1xj0qdoqs5.cloudfront.net/craft/uploads/Work/VFC/vfc_grid-wide.jpg?mtime=20210120145956" alt="Vfc Grid Mobile">
+ 
+                <?php if ( $featured_video = get_field( 'featured_video',get_the_ID() ) ) : ?>
+                    <video class="work-item__img" width="100%" autoplay muted loop>
+                        <source src=<?php echo $featured_video; ?> type="video/ogg">
+                    </video>
+                <?php else: ?>
+                    <img class="work-item__img js-lazy is-active" src="<?php echo get_the_post_thumbnail_url() ?>" alt="To do">
+                <?php endif; ?>
+
                 <div>
                 {{-- <div style="width:100%;height:0px;position:relative;padding-bottom:100.000%;"><iframe src="https://streamable.com/e/eu0tzj?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div> --}}
-            </div>
+                </div>
             </a>
             </article>
 
