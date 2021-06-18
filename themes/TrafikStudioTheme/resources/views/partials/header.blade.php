@@ -4,7 +4,7 @@
 
     <a class="text-white" href="{{ home_url('/') }}">
         <h1 class="sr-only text-black">{{ $siteName }}</h1>
-        <h1 class="text-black">Trafik Studio</h1>
+        <h1 class="text-black font-2xl">Trafik Studio</h1>
     </a>
 
 

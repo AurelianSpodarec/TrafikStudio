@@ -2,7 +2,7 @@
 <div class="pl-5 pr-10">
 
 
-    <div class=" work-list">
+    <div class="work-list">
     <?php 
         $args = [
            
@@ -38,9 +38,6 @@
                     <img class="work-item__img js-lazy is-active" src="<?php echo get_the_post_thumbnail_url() ?>" alt="To do">
                 <?php endif; ?>
 
-                <div>
-                {{-- <div style="width:100%;height:0px;position:relative;padding-bottom:100.000%;"><iframe src="https://streamable.com/e/eu0tzj?autoplay=1&nocontrols=1" frameborder="0" width="100%" height="100%" allowfullscreen allow="autoplay" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div> --}}
-                </div>
             </a>
             </article>
 
