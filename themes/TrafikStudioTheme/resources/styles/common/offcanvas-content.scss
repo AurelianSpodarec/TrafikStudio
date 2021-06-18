@@ -1,0 +1,22 @@
+// ==========================================================================
+// # OffCanvas Content
+// ==========================================================================
+
+.offcanvas-content {
+
+}
+
+
+.offcanvas-container {
+    transition: left .3s ease-out;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    
+    &.is-active {
+        left: -270px;
+        position: relative;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}

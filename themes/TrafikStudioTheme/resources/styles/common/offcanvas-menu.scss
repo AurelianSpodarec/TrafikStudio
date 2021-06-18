@@ -1,0 +1,74 @@
+// ==========================================================================
+// # OffCanvasMenu
+// ==========================================================================
+
+ .offcanvas-menu {
+    display: block;
+    // @screen sm {
+    //     display: none;
+    // }
+    width: 100vw;
+    // touch-action: none;
+     
+    position: fixed;
+    top: 0;
+    bottom: 0; 
+
+    z-index: 1000;
+    background: #d13d4e; 
+    transition: all .3s cubic-bezier(.19,1,.22,1)!important;
+ 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    // left: 0;
+    z-index: 1000;
+    right: -100%;
+
+    &.is-active {
+        right: 0;
+        left: auto;
+    }
+
+    &__inner {
+        // position: absolute;
+        // top: 0;
+        // bottom: 0;
+        // left: -270px;
+        // box-sizing: border-box;
+        // width: 270px;
+        // padding: 32px;
+        // overflow-y: auto;
+
+        width: 100%;
+    }
+
+    &__button {
+        position: absolute;
+        z-index: 1000;
+        top: 20px;
+        right: 20px;
+        padding: 5px;
+        transition: all .75s cubic-bezier(.19,1,.22,1) .3s;
+        transform: scale(0) rotate(0deg);
+        // transform: scale(1) rotate(1turn);
+        &.active {
+            transform: scale(1) rotate(1turn);
+        }
+    }
+}
+
+
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000;
+}

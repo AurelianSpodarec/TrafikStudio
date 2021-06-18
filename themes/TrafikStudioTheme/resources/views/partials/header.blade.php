@@ -8,11 +8,11 @@
     </a>
 
 
-    <button class="js-toggle-menu d-none">
+    <button class="js-toggle-menu d-none js-openMenuButton">
         <span>Menu</span>
     </button>
 
-    <nav id="desktop-nav" class="header__desktop-nav">
+    <nav id="desktop-nav" class="header__desktop-nav hidden md:block">
     @if (has_nav_menu('main_menu'))
         {!! wp_nav_menu([
         'theme_location' => 'main_menu', 
@@ -25,14 +25,3 @@
 
 </div>
 </header>
-
-
-<nav id="mobile-nav" class="header__mobile-nav">
-@if (has_nav_menu('main_menu'))
-    {!! wp_nav_menu([
-    'theme_location' => 'main_menu', 
-    'menu_class' => 'header__mobile-menu', 
-    'echo' => false
-    ]) !!}
-@endif
-</nav>
