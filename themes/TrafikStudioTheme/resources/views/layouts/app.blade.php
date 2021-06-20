@@ -22,10 +22,11 @@
 <div class="offcanvas-menu__inner">
 
     <div>
-        <h2>Trafik Studio</h2>
+        {{-- <h2>Trafik Studio</h2> --}}
+        <img src="https://i.imgur.com/ftqBgAu.png" style="max-width: 120px" />
     </div>
 
-    <button class="offcanvas-menu__button js-closeMenuButton">
+    <button class="offcanvas-menu__close-button js-closeMenuButton">
         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="close-large">
             <line fill="none" stroke="#000" stroke-width="1.4" x1="1" y1="1" x2="19" y2="19"></line>
             <line fill="none" stroke="#000" stroke-width="1.4" x1="19" y1="1" x2="1" y2="19"></line>
@@ -34,11 +35,11 @@
 
 
     <div>
-        <nav id="mobile-nav" class="header__mobile-nav">
+        <nav id="mobile-nav" class="offcanvas-menu__nav">
         @if (has_nav_menu('main_menu'))
             {!! wp_nav_menu([
             'theme_location' => 'main_menu', 
-            'menu_class' => 'header__mobile-menu', 
+            'menu_class' => 'offcanvas-menu__menu', 
             'echo' => false
             ]) !!}
         @endif

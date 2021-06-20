@@ -15,16 +15,27 @@
   const body = document.querySelector('.js-offcanvas-container'),
         mobileMenu = document.querySelector('.js-offcanvas-menu'),
         openMenuButton = document.querySelector('.js-openMenuButton'),
-        closeMenuButton = document.querySelector('.js-closeMenuButton');
+        closeMenuButton = document.querySelector('.js-closeMenuButton'),
+		burgerIconOpen = document.querySelector('.js-burger-icon');
 
         function openMenu() {
 			body.classList.add("is-active");
 			mobileMenu.classList.add('is-active');
+			closeMenuButton.classList.add('is-active');
+			burgerIconOpen.classList.add('is-active');
         }
 
         function closeMenu() {
-			body.classList.remove("is-active");
 			mobileMenu.classList.remove('is-active');
+			closeMenuButton.classList.remove('is-active');
+			burgerIconOpen.classList.remove('is-active');
+
+			// body.style.left = 0;
+
+			setTimeout(function(){ 
+				 body.classList.remove('is-active');
+				//  body.style.left = 'inherit';
+			}, 500);
         }
 
         openMenuButton.addEventListener('click', openMenu);
