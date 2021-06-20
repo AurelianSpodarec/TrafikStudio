@@ -30,12 +30,8 @@
 			closeMenuButton.classList.remove('is-active');
 			burgerIconOpen.classList.remove('is-active');
 
-			// body.style.left = 0;
-
-			setTimeout(function(){ 
-				 body.classList.remove('is-active');
-				//  body.style.left = 'inherit';
-			}, 500);
+			 body.classList.remove('is-active');
+				 
         }
 
         openMenuButton.addEventListener('click', openMenu);

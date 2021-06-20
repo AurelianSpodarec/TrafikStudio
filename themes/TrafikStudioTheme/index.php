@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('js-offcanvas-container offcanvas-container'); ?>>
+<body <?php body_class('js-offcanvas-container offcanvas-container relative'); ?>>
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
