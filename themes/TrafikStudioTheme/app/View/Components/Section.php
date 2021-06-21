@@ -9,6 +9,7 @@ class Section extends Component
 
     public $children;
     public $sectionSize;
+    public $class;
 
     public $bgColor = [
         'default'   => 'section--bg-transparent',
@@ -52,12 +53,13 @@ class Section extends Component
 
     public $container;
 
-    public function __construct($bgColor = 'default', $gutter = 'md', $container = null, $message = null)
+    public function __construct($bgColor = 'default', $gutter = 'md', $container = null, $class = null, $message = null)
     {
         $this->bgColor = $this->bgColor[$bgColor] ?? $this->bgColor['default'];
         $this->gutter = $this->gutter[$gutter] ?? $this->gutter['md'];
+        
         $this->container = $container;
-
+        $this->class = $class;
         $this->message = $message;
     }
 

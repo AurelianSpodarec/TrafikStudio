@@ -21,7 +21,7 @@
         @if ( have_rows( 'column' ) )
         @while ( have_rows( 'column' ) ) <?php the_row(); ?>
         {{--  <div class="{{ $page[$count]['columnWidth'] }}"> --}}
-         <div>
+         {{-- <div> --}}
 
             <?php 
                 $layout = get_row_layout();
@@ -33,7 +33,7 @@
                 @include('blocks.' . $layoutConverted)
             @endif 
 
-        </div>
+        {{-- </div> --}}
         @endwhile
         @endif
         

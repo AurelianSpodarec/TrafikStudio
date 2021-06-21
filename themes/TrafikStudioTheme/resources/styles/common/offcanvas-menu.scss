@@ -63,15 +63,39 @@
 
 
 
-body::-webkit-scrollbar {
-    width: 6px;
-}
+.burger-icon {
+    display: inline-block;
+    width: 36px;
+    height: 2px;
+    background-color: #d13d4e;
 
-body::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 3px;
-}
+    position: relative;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    transform-origin: 0 50%;
+    transition-duration: .5s!important;
 
-body::-webkit-scrollbar-track {
-    background: #000;
+    &.is-active {
+        transform: scaleX(0) translateX(-90px);
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+
+        width: 36px;
+        height: 2px;
+        background-color: #d13d4e;
+        transition-duration: .3s;
+    }
+
+    &:before {
+        top: -11px;
+    }
+
+    &:after {
+        top: 11px;
+    }
 }
