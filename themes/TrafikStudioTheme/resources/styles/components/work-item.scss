@@ -23,25 +23,24 @@
 }
 
 
-.work-item { 
-    position: relative;
-    float: left;
-    width: 100%;
-    margin-bottom: 1.25rem;
-    padding-left: 1.25rem;
 
-    & .work-item__link {
-        height: 12.5rem;
-        
-        @screen sm {
-            height: auto;
-        }
+.work-list-2 {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
     }
+}
+
+
+.work-list-2 > .work-item { 
+  
+    
     &:nth-child(1) {
         width: 100%;
         & .work-item__link {
             @screen sm {
-            padding-top: 40.2777777778%;
+                padding-top: 40.2777777778%;
             }
         }
     }
@@ -89,6 +88,19 @@
 
 
 .work-item {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    padding-left: 1.25rem;
+
+    & .work-item__link {
+        height: 12.5rem;
+        
+        @screen sm {
+            height: auto;
+        }
+    }
 
     &__link:before {
         content: "";

@@ -2,7 +2,7 @@
 <div class="pl-5 pr-10">
 
 
-    <div class="work-list">
+    <div class="work-list-2">
     <?php 
         $args = [
            

@@ -205,39 +205,79 @@
 		// 	]
 		//   });	
 
+		// new FinisherHeader({
+		// 	"count": 90,
+		// 	"size": {
+		// 	  "min": 1,
+		// 	  "max": 20,
+		// 	  "pulse": 0
+		// 	},
+		// 	"speed": {
+		// 	  "x": {
+		// 		"min": 0,
+		// 		"max": 0.4
+		// 	  },
+		// 	  "y": {
+		// 		"min": 0,
+		// 		"max": 0.1
+		// 	  }
+		// 	},
+		// 	"colors": {
+		// 	  "background": "#ffdebe",
+		// 	  "particles": [
+		// 		"#ffffff",
+		// 		"#f8fe87",
+		// 		"#ffd9aa",
+		// 		"#ff7b1b",
+		// 		"#f14646"
+		// 	  ]
+		// 	},
+		// 	"blending": "screen",
+		// 	"opacity": {
+		// 	  "center": 0,
+		// 	  "edge": 0.4
+		// 	},
+		// 	"skew": -2,
+		// 	"shapes": [
+		// 	  "c",
+		// 	  "s",
+		// 	  "t"
+		// 	]
+		//   });
+
 		new FinisherHeader({
-			"count": 90,
+			"count": 13,
 			"size": {
-			  "min": 1,
-			  "max": 20,
+			  "min": 2,
+			  "max": 40,
 			  "pulse": 0
 			},
 			"speed": {
 			  "x": {
 				"min": 0,
-				"max": 0.4
+				"max": 0.8
 			  },
 			  "y": {
 				"min": 0,
-				"max": 0.1
+				"max": 0.2
 			  }
 			},
 			"colors": {
-			  "background": "#ffdebe",
+			  "background": "#1d1d27",
 			  "particles": [
-				"#ffffff",
-				"#f8fe87",
-				"#ffd9aa",
-				"#ff7b1b",
-				"#f14646"
+				"#ff926b",
+				"#87ddfe",
+				"#acaaff",
+				"#1bffc2",
+				"#f9a5fe"
 			  ]
 			},
 			"blending": "screen",
 			"opacity": {
-			  "center": 0,
-			  "edge": 0.4
+			  "center": 1,
+			  "edge": 1
 			},
-			"skew": -2,
+			"skew": 0,
 			"shapes": [
 			  "c",
 			  "s",
