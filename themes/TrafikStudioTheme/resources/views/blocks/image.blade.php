@@ -1,0 +1,1 @@
+<img src="<?php echo esc_url( get_sub_field( 'image' ) ); ?>" class="my-24" alt="Image" />

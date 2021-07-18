@@ -1,6 +1,4 @@
-<x-section> 
 <div class="pl-5 pr-10">
-
 
     <div class="work-list-2">
     <?php 
@@ -49,5 +47,4 @@
     <div>
 
 
-</div>
-</x-section>
+</div> 

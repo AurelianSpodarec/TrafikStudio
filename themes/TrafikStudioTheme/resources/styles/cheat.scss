@@ -1,0 +1,21 @@
+
+
+.container {
+    @media (min-width: 1536px) {
+        max-width: 1280px!important;
+    }
+
+    &--xs {
+        max-width: 720px!important;
+    }
+}
+
+
+.article {
+    h2 {
+        @apply text-4xl mt-4 mb-3
+    }
+    p {
+        @apply text-lg mb-2
+    }
+}
