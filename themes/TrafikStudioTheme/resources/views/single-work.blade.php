@@ -7,7 +7,7 @@
 
             
            
-    <x-section class="mt-32" container="default">
+    <x-section container="default">
  
 
                 <?php 
@@ -87,6 +87,14 @@
 
 @endwhile
 @endif
+
+
+
+<div>
+
+
+
+</div>
 
 
 

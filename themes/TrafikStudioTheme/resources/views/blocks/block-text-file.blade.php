@@ -1,4 +1,4 @@
-<x-section>
+
 <div class="mx-10 px-8 py-6">
 
     <div class="flex">
@@ -20,4 +20,3 @@
     </div>
 
 </div>
-</x-section>

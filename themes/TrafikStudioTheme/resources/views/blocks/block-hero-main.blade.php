@@ -1,7 +1,6 @@
-<x-section class="mt-0">
-<div class="relative">
+{{-- <div class="relative"> --}}
     {{-- <video loop="loop" preload="" muted="muted" playsinline="" autoplay="autoplay" class="slide__video js-slider__video"><source src="https://d2jd1xj0qdoqs5.cloudfront.net/craft/uploads/Home/B-Corp.mp4?mtime=20210517095645" type="video/mp4"></video> --}}
-<div class="header finisher-header flex content-center items-center self-center" style="width: 100%; height: 700px;">
+{{-- <div class="header finisher-header flex content-center items-center self-center" style="width: 100%; height: 700px;"> --}}
 
 
     {{-- <div class="mx-auto">
@@ -9,7 +8,7 @@
         <p>Versoly allows creators, founders and marketers to move, test and grow faster with pre-built blocks, templates and CMS.</p>
         <button>View Work</button>
     </div> --}}
-
+{{-- 
 <div class="mx-auto" style="
     text-align: center;
 ">
@@ -43,5 +42,11 @@
 
 </div>
 
+</div> --}}
+
+
+<div>
+
+
+
 </div>
-</x-section>

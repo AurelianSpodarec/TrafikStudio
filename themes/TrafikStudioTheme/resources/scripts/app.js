@@ -245,43 +245,79 @@
 		// 	]
 		//   });
 
+		// new FinisherHeader({
+		// 	"count": 13,
+		// 	"size": {
+		// 	  "min": 2,
+		// 	  "max": 40,
+		// 	  "pulse": 0
+		// 	},
+		// 	"speed": {
+		// 	  "x": {
+		// 		"min": 0,
+		// 		"max": 0.8
+		// 	  },
+		// 	  "y": {
+		// 		"min": 0,
+		// 		"max": 0.2
+		// 	  }
+		// 	},
+		// 	"colors": {
+		// 	  "background": "#1d1d27",
+		// 	  "particles": [
+		// 		"#ff926b",
+		// 		"#87ddfe",
+		// 		"#acaaff",
+		// 		"#1bffc2",
+		// 		"#f9a5fe"
+		// 	  ]
+		// 	},
+		// 	"blending": "screen",
+		// 	"opacity": {
+		// 	  "center": 1,
+		// 	  "edge": 1
+		// 	},
+		// 	"skew": 0,
+		// 	"shapes": [
+		// 	  "c",
+		// 	  "s",
+		// 	  "t"
+		// 	]
+		//   });
+
 		new FinisherHeader({
 			"count": 13,
 			"size": {
 			  "min": 2,
-			  "max": 40,
+			  "max": 13,
 			  "pulse": 0
 			},
 			"speed": {
 			  "x": {
 				"min": 0,
-				"max": 0.8
+				"max": 0.4
 			  },
 			  "y": {
 				"min": 0,
-				"max": 0.2
+				"max": 0.6
 			  }
 			},
 			"colors": {
-			  "background": "#1d1d27",
+			  "background": "#fff",
 			  "particles": [
-				"#ff926b",
-				"#87ddfe",
-				"#acaaff",
-				"#1bffc2",
-				"#f9a5fe"
+				"#fbfcca",
+				"#d7f3fe",
+				"#ffd0a7"
 			  ]
 			},
-			"blending": "screen",
+			"blending": "overlay",
 			"opacity": {
 			  "center": 1,
-			  "edge": 1
+			  "edge": 0
 			},
 			"skew": 0,
 			"shapes": [
-			  "c",
-			  "s",
-			  "t"
+			  "c"
 			]
 		  });
 

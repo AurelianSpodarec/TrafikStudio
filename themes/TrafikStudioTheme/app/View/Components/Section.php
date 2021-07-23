@@ -11,7 +11,7 @@ class Section extends Component
     public $class;
 
     public $container = [
-        'fluid'   => '',
+        'fluid'   => 'container--fluid',
         'xs'      => 'container container--xs',
         'sm'      => 'tf-container tf-container--sm',
         'default' => 'container',

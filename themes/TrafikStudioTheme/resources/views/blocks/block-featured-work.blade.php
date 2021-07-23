@@ -1,15 +1,50 @@
-<x-section>
-
-     <div class="work-list">
-    <?php 
+   <?php 
         $args = [
            
             'post_type' => 'work',
             'posts_per_page' => 3   ,
         ];
 
-        $query = new Wp_Query($args);
-        ?>
+        $query = new Wp_Query($args); ?>
+
+
+        
+<div>
+
+    <div></div>
+
+
+    <div></div>
+
+</div>
+
+
+<div class="flex">
+
+    <div class="w-1/3">
+        <img src="http://localhost:8888/wp-content/uploads/2021/05/trib-1-scaled.jpg" />
+        <h3>Creative Music</h3>
+    </div>
+
+    <div class="w-1/3">
+        <img src="http://localhost:8888/wp-content/uploads/2021/05/trib-1-scaled.jpg" />
+        <h3>Creative Music</h3>
+    </div>
+
+    <div class="w-1/3">
+        <img src="http://localhost:8888/wp-content/uploads/2021/05/trib-1-scaled.jpg" />
+        <h3>Creative Music</h3>
+    </div>
+
+</div>
+
+
+
+
+
+     <div class="work-list">
+  
+        
 
         <?php if ( $query->have_posts() ) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
@@ -45,5 +80,4 @@
         <?php wp_reset_postdata(); ?>
 
     <div>
-
-</x-section>
+ 
