@@ -1,5 +1,5 @@
 <x-section>
-<div class="mx-10 px-8 py-6 flex" style="background-color: #1f1f1f; color: white;">
+<div class="mx-10 px-12 py-10 flex rounded-lg" style="background-color: #1f1f1f; color: white;">
 
     <div class="w-2/3">
         <h2 class="text-5xl">Looking for support?</h2>

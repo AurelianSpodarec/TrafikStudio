@@ -19,40 +19,48 @@ class Section extends Component
     ];
 
     public $bgColor = [
-        'default'   => 'section--bg-transparent',
-        'primary'   => 'section--bg-primary-default',
-        'secondary' => 'section--bg-secondary-default',
-        'teritary'  => 'section--bg-teritary-default',
-        'gray'     =>  'bg-gray-50',
+        'default'   => '',
+        'white'     => 'bg-white',
+        'gray'      => 'bg-gray-50',
+        'dark'      => 'bg-gray-900',
+
+        'primary'   => '',
+        'secondary' => '',
+        'teritary'  => '',
+        // 'gray'     =>  'bg-gray-50',
     ];
 
-    // public $gutter = [
-    //     'none'    => 'gutter-none',
-    //     'default' => 'gutter-md',
-    //     '2xs'     => 'gutter-2xs',
-    //     'xs'      => 'gutter-xs',
-    //     'sm'      => 'gutter-sm',
-    //     'md'      => 'gutter-md',
-    //     'lg'      => 'gutter-lg',
-    //     'xl'      => 'gutter-xl',
-    //     '2xl'     => 'gutter-2xl',
-    //     '3xl'     => 'gutter-3xl',
-    //     '4xl'     => 'gutter-4xl',
-    //     '5xl'     => 'gutter-5xl',
-    // ];
+    public $paddingTop = [
+        'none'    => 'pt-0',
+        'xs'      => '',
+        'sm'      => '',
+        'default' => 'pt-8 md:pt-24',
+        'lg'      => '',
+        'xl'      => ''
+    ];
 
-   
- 
+    public $paddingBottom = [
+        'none'    => 'pm-0',
+        'xs'      => '',
+        'sm'      => '',
+        'default' => 'pm-8 md:pm-24',
+        'lg'      => '',
+        'xl'      => ''
+    ]; 
 
 
     public function __construct(
         $bgColor = 'default',
-        $container = null,
+        $container = 'default',
+        $paddingTop = null,
+        $paddingBottom = null,
         $class = null, 
         $message = null
     ) {
         $this->bgColor = $this->bgColor[$bgColor] ?? $this->bgColor['default'];
         $this->container = $this->container[$container] ?? $this->container['default'];
+        $this->paddingTop = $this->paddingTop[$paddingTop] ?? $this->paddingTop['none'];
+        $this->paddingBottom = $this->paddingBottom[$paddingBottom] ?? $this->paddingBottom['none'];
  
         $this->class = $class;
         $this->message = $message;

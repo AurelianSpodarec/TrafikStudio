@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => $bgColor . " " . $class . " " . "relative"]) }}>
+<section {{ $attributes->merge(['class' => $bgColor . " " . $paddingTop . " " . $paddingBottom . " " . $class . " " . "relative"]) }}>
 
  
 <div {{ $attributes->merge(['class' =>  $container . " mx-auto"]) }}>

@@ -14,7 +14,7 @@
 @while ( have_rows( 'flexible_content' ) ) <?php the_row(); ?>
 
 
-    <x-section class="py-11" container="{{ $page[$count]['container'] }}" bgColor="{{ $page[$count]['backgroundColor'] }}">
+    <x-section container="{{ $page[$count]['container'] }}" paddingTop="{{ $page[$count]['paddingTop']}}" paddingBottom="{{ $page[$count]['paddingBottom']}}" bgColor="{{ $page[$count]['backgroundColor'] }}">
     @if ( have_rows( 'row' ) )
     @while ( have_rows( 'row' ) ) <?php the_row(); ?>
  

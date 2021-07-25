@@ -40,7 +40,9 @@ class Page extends Composer
                 
                 $rowConfigData = [
                     'container'       => $rowConfig['container'],
-                    'backgroundColor' => $rowConfig['background_color']
+                    'backgroundColor' => $rowConfig['background_color'],
+                    'paddingTop'      => $rowConfig['padding_top'],
+                    'paddingBottom'      => $rowConfig['padding_bottom'],
                 ];
 
                 // array_push($data, array_merge($rowConfigData, $columnConfigData, $column));
