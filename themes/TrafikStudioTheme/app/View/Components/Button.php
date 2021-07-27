@@ -14,6 +14,8 @@ class Button extends Component
     public $buttonKind;
     public $buttonRadius;
     public $buttonSize;
+
+    public $iconLeft;
 //    public $buttonDisabled;
 //   ADD: Uppercase, disabed, new tab,
 
@@ -55,7 +57,7 @@ class Button extends Component
     public $disabled;
 
 
-    public function __construct($variant = 'primary', $kind = 'solid', $radius = 'none', $size = 'md', $message = null)
+    public function __construct($variant = 'primary', $kind = 'solid', $radius = 'none', $size = 'md', $message = null, $iconLeft = null)
     {
         $this->buttonVariant = $this->variant[$variant] ?? $this->variant['default'];
         $this->buttonKind = $this->kind[$kind] ?? $this->kind['default'];
@@ -63,6 +65,7 @@ class Button extends Component
         $this->buttonSize = $this->size[$size] ?? $this->size['md'];
         $this->buttonDisabled = $disabled ?? 'disabled';
 
+        $this->iconLeft = $iconLeft;
         $this->message = $message;
     }
 

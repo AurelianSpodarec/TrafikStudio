@@ -89,3 +89,9 @@ transition: background-color 200ms linear;
     border-radius: 10px;
     
 }
+
+.tf-container {
+    &--sm {
+        max-width: 1040px;
+    }
+}

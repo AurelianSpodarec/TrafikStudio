@@ -36,14 +36,14 @@ class Section extends Component
         'sm'      => '',
         'default' => 'pt-8 md:pt-24',
         'lg'      => '',
-        'xl'      => ''
+        'xl'      => 'pt-8 md:pt-44'
     ];
 
     public $paddingBottom = [
-        'none'    => 'pm-0',
-        'xs'      => '',
-        'sm'      => '',
-        'default' => 'pm-8 md:pm-24',
+        'none'    => 'pb-0',
+        'xs'      => 'pb-4 md:pb-8',
+        'sm'      => 'pb-6 md:pb-16',
+        'default' => 'pb-8 md:pb-24',
         'lg'      => '',
         'xl'      => ''
     ]; 
