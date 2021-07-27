@@ -38,32 +38,32 @@
 
 
 
-	const siteHeader = document.querySelector('.js-header'),
-		siteHeaderHeight = siteHeader && siteHeader.offsetHeight,
-		prevScroll = 0;
+	// const siteHeader = document.querySelector('.js-header'),
+	// 	siteHeaderHeight = siteHeader && siteHeader.offsetHeight,
+	// 	prevScroll = 0;
 
-		function stickyNav() {
-			// if (window.scrollY >= siteHeaderHeight) {
-			if (window.scrollY >= 1) {
-				siteHeader && siteHeader.classList.add('is-sticky');
-			} else {
-				siteHeader && siteHeader.classList.remove('is-sticky');
-			}
-		}
+	// 	function stickyNav() {
+	// 		// if (window.scrollY >= siteHeaderHeight) {
+	// 		if (window.scrollY >= 1) {
+	// 			siteHeader && siteHeader.classList.add('is-sticky');
+	// 		} else {
+	// 			siteHeader && siteHeader.classList.remove('is-sticky');
+	// 		}
+	// 	}
 
-		function showNav() {
-			var currentScroll = window.pageYOffset;
+	// 	function showNav() {
+	// 		var currentScroll = window.pageYOffset;
 
-			if (currentScroll < prevScroll) {
-				siteHeader && siteHeader.classList.add('sticky-show');
-			} else {
-				siteHeader && siteHeader.classList.remove('sticky-show');
-			}
-			prevScroll = currentScroll;
-		}
+	// 		if (currentScroll < prevScroll) {
+	// 			siteHeader && siteHeader.classList.add('sticky-show');
+	// 		} else {
+	// 			siteHeader && siteHeader.classList.remove('sticky-show');
+	// 		}
+	// 		prevScroll = currentScroll;
+	// 	}
 
-		window.addEventListener('scroll', showNav);
-		window.addEventListener('scroll', stickyNav);
+	// 	window.addEventListener('scroll', showNav);
+	// 	window.addEventListener('scroll', stickyNav);
 
 
 

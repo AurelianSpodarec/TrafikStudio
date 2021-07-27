@@ -81,3 +81,11 @@ transition: background-color 200ms linear;
     //     z-index: 0;
     // }
 }
+
+
+.cta-link a {
+    background: theme('colors.primary.300');
+    padding: 16px 36px;
+    border-radius: 10px;
+    
+}

@@ -10,6 +10,17 @@
         box-shadow: 0 0 24px 6px rgb(0 0 0 / 10%);
     }
 
+
+    &.menu-home {
+       
+        & .menu-item {
+            
+            & a {
+                color: white;
+            }
+        }
+    }
+
     // Desktop Menu
     &__desktop-nav {
         margin-left: auto;
@@ -23,14 +34,24 @@
                 font-size: 1.125rem;
                 color: black;
             }
-
         }
 
+        
     }
+
+   
+
+
+
+    
 
     // Mobile Menu
     &__mobile-menu {
         display: none;
     }
 
+}
+
+.header__desktop-menu a {
+    color: white;
 }
