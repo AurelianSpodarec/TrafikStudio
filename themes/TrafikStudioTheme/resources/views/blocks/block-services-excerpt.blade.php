@@ -18,18 +18,21 @@ Desing --}}
 
 
 
-    <div class="w-full md:w-2/5">
-        <span class="text-red">Services</span>
-        <h2 class="text-5xl">Bring your brand to life</h2>
+    <div class="w-full md:w-2/5 flex items-center">
 
-        <p>We’ve got years of web design experience, making us the ideal team to create your user-friendly and brand-focused website
-We want to tell your brand’s story</p>
-        <button>Start a project</button>
+        <div class="">
+            <span class="text-red">Services</span>
+            <h2 class="text-5xl">Bring your brand to life</h2>
+
+            <p class="mb-4">We’ve got years of web design experience, making us the ideal team to create your user-friendly and brand-focused website
+    We want to tell your brand’s story</p>
+            <x-button>Start a project</x-button>
+        </div>
     </div>
 
     <div class="w-full md:w-3/5 pl-12">
 
-        <div class="grid gap-x-12 gap-y-12 grid-cols-2">
+        <div class="grid gap-x-8 gap-y-8 md:grid-cols-2">
         <div class="service-excerpt transform translate-y-4 bg-white rounded-xl">
         <div class="py-12 px-8">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,7 +67,7 @@ We want to tell your brand’s story</p>
 
         <div class="service-excerpt transform translate-y-4 bg-white rounded-xl">
         <div class="py-12 px-8">
-        
+
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)">
                 <path d="M24.0173 4.60547H27.5208C28.0063 4.60547 28.3997 4.21207 28.3997 3.72656C28.3997 3.24105 28.0063 2.84766 27.5208 2.84766H24.0173C23.5318 2.84766 23.1384 3.24105 23.1384 3.72656C23.1384 4.21207 23.5318 4.60547 24.0173 4.60547Z" fill="#E4C47F"></path>

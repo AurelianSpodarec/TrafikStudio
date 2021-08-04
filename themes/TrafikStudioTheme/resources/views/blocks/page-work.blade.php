@@ -22,7 +22,7 @@
                 <?php $client_term = get_the_terms(get_the_ID(), 'client_category'); ?>
                 <div class="work-item__inner">
                     <p class="work-item__client"><?php echo $client_term[0]->name ?></p>
-                    <h2 class="work-item__heading"><?php the_title(); ?></h2>
+                    <h2 class="work-item__heading work-item__heading--<?php get_field( 'title_text' ) ?>"><?php the_title(); ?></h2>
 
                     <p class="work-item__cta">View Project</p>
                 </div>

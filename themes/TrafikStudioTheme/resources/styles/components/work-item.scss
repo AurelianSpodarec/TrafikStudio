@@ -86,7 +86,7 @@
     }
 }
 
-
+//#151a24 - section
 .work-item {
     position: relative;
     float: left;
@@ -163,13 +163,14 @@
     &__heading {
         font-size: 3rem;
         color: white;
+        font-weight: bold!important;
     }
 
     &__link {
         display: block;
-    overflow: hidden;
-    position: relative;
-    height: auto;
+        overflow: hidden;
+        position: relative;
+        height: auto;
     }
 
     &__cta {

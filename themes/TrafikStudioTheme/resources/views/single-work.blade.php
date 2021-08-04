@@ -26,7 +26,7 @@
 
             
             ?>
-        <div>
+        <div class="pt-40 pb-16">
             <span class="flex">{{ $a[0]->name }}
                 <?php 
                     if ( get_field( 'website_url' ) ) : ?> 

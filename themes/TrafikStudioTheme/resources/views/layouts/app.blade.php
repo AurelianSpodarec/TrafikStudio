@@ -8,7 +8,8 @@
 
     @include('partials.header')
 
-        <main id="main" class="{{ is_home() || is_front_page() ? "" : "mt-32" }}">
+        {{-- <main id="main" class="{{ is_home() || is_front_page() ? "" : "mt-32" }}"> --}}
+        <main id="main">
             @yield('content')
         </main>
     

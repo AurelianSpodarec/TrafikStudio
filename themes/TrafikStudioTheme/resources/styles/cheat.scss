@@ -26,7 +26,9 @@ background: white;
 -webkit-transition: background-color 200ms linear;
 -ms-transition: background-color 200ms linear;
 transition: background-color 200ms linear;
-     
+box-shadow:
+0  5px 10px rgba(154,160,185,0.05),
+0 15px 40px rgba(166,173,201,0.2);
     &:hover {
         background: linear-gradient(to right, #f5aaaf,#faaaaa, #faa7a1);
         // #34343f
@@ -39,7 +41,10 @@ transition: background-color 200ms linear;
 
 
 .hero {
-    
+    padding: 120px 0 90px;
+    @screen md {
+        padding: 200px 0 90px;
+    }
     &__skewedWrapper {
         position: absolute;
         left: 0;
@@ -60,26 +65,7 @@ transition: background-color 200ms linear;
             border-left: 100vw solid transparent;
         }
     }
-    // position: relative;
-    // z-index: 1;
-    // overflow: hidden;
-    // // background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #00c9fd 0%, #81ee8e 100%) repeat scroll 0 0;
-    // background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #0e1117 0%, #0e1117 100%) repeat scroll 0 0;
-    // min-height: 750px;
-
-    // &:before {
-    //     background: #fff none repeat scroll 0 0;
-    //     height: 50%;
-    //     top: 70%;
-    //     content: "";
-    //     height: 100%;
-    //     left: 0;
-    //     position: absolute;
-    //     -webkit-transform: skewY(170deg);
-    //     transform: skewY(170deg);
-    //     width: 100%;
-    //     z-index: 0;
-    // }
+  
 }
 
 
@@ -87,6 +73,7 @@ transition: background-color 200ms linear;
     background: theme('colors.primary.300');
     padding: 16px 36px;
     border-radius: 10px;
+    color: white!important;
     
 }
 
@@ -95,3 +82,36 @@ transition: background-color 200ms linear;
         max-width: 1040px;
     }
 }
+
+
+.featured-work {
+    
+    @screen md {
+        & .work-item {
+            padding-left: 2.5rem;
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:nth-child(2) {
+                transform: translateY(50px);
+            }
+            &:nth-child(3) {
+                transform: translateY(100px);
+            }
+        }
+    }
+   
+
+    
+}
+
+
+.heading {
+
+}
+
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;

@@ -1,10 +1,10 @@
-<header class="js-header header z-40 {{ is_home() || is_front_page() ? "absolute menu-home" : "static" }} top-0 left-0 right-0">
+<header class="js-header header px-8 md:px-0 z-40 {{ is_home() || is_front_page() ? "absolute menu-home" : "static" }} top-0 left-0 right-0">
 <div class="container mx-auto  py-10 flex items-center">
 
 
     <a class="text-white" href="{{ home_url('/') }}">
         <h1 class="sr-only text-black">{{ $siteName }}</h1>
-        <h1 class="text-4xl uppercase font-bold">Trafik Studio</h1>
+        <h1 class="text-4xl uppercase font-bold {{ is_home() || is_front_page() ? "text-white" : "text-black" }} ">Trafik Studio</h1>
         {{-- <img src="https://i.imgur.com/ftqBgAu.png" style="max-width: 170px" /> --}}
         {{-- <img src="https://i.imgur.com/SWiIhNE.png" style="max-width: 210px" /> --}}
     </a>
