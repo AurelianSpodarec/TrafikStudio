@@ -1,4 +1,4 @@
-<div class="pl-5 pr-10">
+<div class="px-4 md:pl-5 md:pr-10">
 
     <div class="work-list-2">
     <?php 

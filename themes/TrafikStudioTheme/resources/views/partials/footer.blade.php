@@ -1,4 +1,4 @@
-<footer class="mt-24" style="background-color: #141414; color: white;">
+<footer class="mt-16 md:mt-24" style="background-color: #141414; color: white;">
 
 
     <x-section container="default">

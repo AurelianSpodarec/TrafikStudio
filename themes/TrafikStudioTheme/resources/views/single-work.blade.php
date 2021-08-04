@@ -2,51 +2,39 @@
 @section('content')
 
 
-
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-            
-           
-    <x-section container="default">
- 
-
-                <?php 
-                
-                $b = get_the_ID();
-
-                
-                
-                ?>
-
-                <?php
-               // $a = wp_get_post_terms( '64'); //get_the_term('client_category'); 
-//$terms = get_the_terms( $post->ID , 'taxonomyname' );
-
-                $a = get_the_terms($b, 'client_category');
-
-            
-            ?>
-        <div class="pt-40 pb-16">
-            <span class="flex">{{ $a[0]->name }}
-                <?php 
-                    if ( get_field( 'website_url' ) ) : ?> 
-                    - <a target="_blank" href="<?php echo esc_url( get_field( 'website_url' ) ); ?>" class="flex text-orange underline" style="color: #c58901;">Visit Online</a>
-                <?php endif; ?>
-            </span>
-            <h1 class="text-7xl font-bold"><?php the_title(); ?></h1>
-            <p class="text-white"><?php echo get_the_date(); ?></p> 
-            <div class="flex" style="background-color: #cc0000e6;"></div>
-        </div>
-	 
-
-    </x-section>
- 
-
  <?php
     //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
     $flexibleContentPath = "C:\\Users\\44775\\Desktop\\WebDevelopment\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\"; 
     $count = 0;
 ?>
+
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+            
+           
+<x-section container="default">
+
+    <?php
+        $postID = get_the_ID(); 
+        $terms = get_the_terms($postID, 'client_category');
+    ?>
+
+    <div class="px-6 md:px-0 md:pt-40 md:pb-16">
+        <span class="flex">{{ $terms[0]->name }}
+            <?php 
+                if ( get_field( 'website_url' ) ) : ?> 
+                - <a target="_blank" href="<?php echo esc_url( get_field( 'website_url' ) ); ?>" class="flex text-orange underline" style="color: #c58901;">Visit Online</a>
+            <?php endif; ?>
+        </span>
+        <h1 class="text-3xl md:text-7xl font-bold"><?php the_title(); ?></h1>
+        <p class="text-white"><?php echo get_the_date(); ?></p> 
+        <div class="flex" style="background-color: #cc0000e6;"></div>
+    </div>
+    
+
+</x-section>
+
 
 
 @if ( have_rows( 'flexible_content' ) ) 

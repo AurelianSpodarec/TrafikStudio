@@ -92,7 +92,10 @@
     float: left;
     width: 100%;
     margin-bottom: 1.25rem;
-    padding-left: 1.25rem;
+
+    @screen md {
+        padding-left: 1.25rem;
+    }
 
     & .work-item__link {
         height: 12.5rem;
@@ -112,8 +115,12 @@
         height: 110%;
         background-color: rgba(12,12,12,.17);
         z-index: 1;
-        opacity: 0;
+        opacity: 1;
         transition: opacity .3s cubic-bezier(.75,0,.5,1);
+
+        @screen md {
+            opacity: 0;
+        }
     }
 
     &:focus,
@@ -149,21 +156,31 @@
     }
 
     &__inner {
-        left: 3.125rem;
-        bottom: 3.125rem;
-        right: 3.125rem;
-        position: absolute;
         z-index: 2;
-        transition: transform .3s cubic-bezier(.645,.045,.355,1);
+        position: absolute;
         color: white;
-        // transition-delay: .05s;
+        transition: transform .3s cubic-bezier(.645,.045,.355,1);
         transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        left: 2.125rem;
+        bottom: 1.3rem;
+        right: 2.125rem;
+
+        @screen md {
+            left: 3.125rem;
+            bottom: 3.125rem;
+            right: 3.125rem;
+        }
+       
     }
 
     &__heading {
-        font-size: 3rem;
-        color: white;
         font-weight: bold!important;
+        color: white;
+        font-size: 1.3rem;
+        
+        @screen md {
+            font-size: 3rem;
+        }
     }
 
     &__link {
@@ -188,14 +205,12 @@
 
     &__img {
         position: absolute;
-        width: 100%;
-        object-fit: cover;
         top: 0;
-        height: auto;
-
-        position: absolute;
         right: 0;
-
+        
+        object-fit: cover;
+        
+        width: 100%;
         height: 100%;
     }
 

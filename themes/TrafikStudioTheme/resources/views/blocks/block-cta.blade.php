@@ -1,8 +1,8 @@
-<div class=" text-center mx-10 px-12 py-16 flex flex-wrap rounded-3xl" style="background-color: #1f1f1f; color: white;">
+<div class="md:text-center mx-4 md:mx-10 px-4 md:px-12 py-16 flex flex-wrap rounded-3xl" style="background-color: #1f1f1f; color: white;">
 
 
     <div class="w-full">
-        <h2 class="text-5xl font-bold mb-3">Looking for support?</h2>
+        <h2 class="text-2xl md:text-5xl font-bold mb-3">Looking for support?</h2>
         <p class="mb-8">We’ve helped some of the UK’s most successful businesses with their digital products. </p>
     </div>
 
