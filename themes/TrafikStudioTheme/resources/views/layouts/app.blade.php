@@ -24,15 +24,18 @@
 
     <div>
         {{-- <h2>Trafik Studio</h2> --}}
-        <img src="https://i.imgur.com/ftqBgAu.png" style="max-width: 120px" />
+        {{-- <img src="https://i.imgur.com/ftqBgAu.png" style="max-width: 120px" /> --}}
     </div>
 
+    <div>
     <button class="offcanvas-menu__close-button js-closeMenuButton">
-        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="close-large">
-            <line fill="none" stroke="#000" stroke-width="1.4" x1="1" y1="1" x2="19" y2="19"></line>
-            <line fill="none" stroke="#000" stroke-width="1.4" x1="19" y1="1" x2="1" y2="19"></line>
+        <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="close-large">
+            <line fill="none" stroke="#fff" stroke-width="1.4" x1="1" y1="1" x2="19" y2="19"></line>
+            <line fill="none" stroke="#fff" stroke-width="1.4" x1="19" y1="1" x2="1" y2="19"></line>
         </svg>
     </button>
+    {{-- Close --}}
+    </div>
 
 
     <div>

@@ -1,0 +1,24 @@
+// ==========================================================================
+// # Featured Work
+// ==========================================================================
+
+.featured-work {
+    
+    @screen md {
+        & .work-item {
+            padding-left: 2.5rem;
+            &:first-of-type {
+                padding-left: 0;
+            }
+
+            &:nth-child(2) {
+                transform: translateY(50px);
+            }
+            &:nth-child(3) {
+                transform: translateY(100px);
+            }
+        }
+    }
+
+    
+}
