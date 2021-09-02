@@ -12,6 +12,12 @@
     font-weight: 500;
     font-family: inherit; 
     font-size: 1.125em;
+    transition: background-color 350ms,transform 350ms,-webkit-transform 350ms;
+
+    &:hover {
+        transform: scale(.97);
+    }
+    
 
     &.button-small {
 

@@ -11,43 +11,7 @@ taxonomy-service_category.blade.php
 ?>
 
 
-@if ( have_rows( 'flexible_content' ) ) 
-@while ( have_rows( 'flexible_content' ) ) <?php the_row(); ?>
 
-
-    @if ( have_rows( 'row' ) )
-    @while ( have_rows( 'row' ) ) <?php the_row(); ?>
-    {{-- <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" gutter="{{ $page[$count]['gutter']}}" container="{{ $page[$count]['container'] }}">
-
---}}
-        @if ( have_rows( 'column' ) )
-        @while ( have_rows( 'column' ) ) <?php the_row(); ?>
-        {{--  <div class="{{ $page[$count]['columnWidth'] }}"> --}}
-         <div>
-
-            <?php 
-            print_r(get_row_layout());
-                $layout = get_row_layout();
-                $layoutConverted = str_replace( '_', '-', $layout);
-                $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );
-            ?>
-
-            @if( file_exists( $file ))
-                @include('blocks.' . $layoutConverted)
-            @endif 
-
-        </div>
-        @endwhile
-        @endif
-        
-    
-    {{--  </x-section> --}}
-    @endwhile
-    @endif
-
-
-@endwhile
-@endif
 
 
 @endsection

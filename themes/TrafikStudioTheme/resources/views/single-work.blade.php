@@ -3,16 +3,13 @@
 
 
  <?php
-    //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
-    $flexibleContentPath = "C:\\Users\\44775\\Desktop\\WebDevelopment\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\"; 
     $count = 0;
 ?>
 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-            
-           
+                   
 <x-section container="default">
 
     <?php
@@ -52,14 +49,11 @@
             <?php 
                 $layout = get_row_layout();
                 $layoutConverted = str_replace( '_', '-', $layout);
-                $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );
             ?>
 
-            @if( file_exists( $file ))
-                @include('blocks.' . $layoutConverted)
-            @else
-                <?php echo "File $file with the name of $layoutConverted doesn't exists" ?>    
-            @endif 
+            <?php $layoutConverted = str_replace( '_', '-', get_row_layout()); ?>
+            
+            @include('blocks.' . $layoutConverted)
  
         
         @endwhile
@@ -92,3 +86,4 @@
  
 
 @endsection
+

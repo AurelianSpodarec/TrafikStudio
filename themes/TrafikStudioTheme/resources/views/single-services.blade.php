@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content')
 
-single-services.blade.php
+
 {{--    
     {{-- $flexibleContentPath = dirname(__FILE__) . '\\blocks\\'; --}}
 {{-- $flexibleContentPath = " /var/www/html" --}}
 <?php
-    //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheme/resources/views/blocks/";
-    $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\";
+    $flexibleContentPath = "/var/www/html/wp-content/themes/TrafikStudioTheme/resources/views/blocks/";
+    //$flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Personal\\TrafikStudio\\wp-content\\themes\\TrafikStudioTheme\\resources\\views\\blocks\\";
     
 ?>
 
@@ -26,15 +26,14 @@ single-services.blade.php
         {{--  <div class="{{ $page[$count]['columnWidth'] }}"> --}}
          <div>
 
-            <?php 
+           <?php 
                 $layout = get_row_layout();
                 $layoutConverted = str_replace( '_', '-', $layout);
-                $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );
             ?>
 
-            @if( file_exists( $file ))
-                @include('blocks.' . $layoutConverted)
-            @endif 
+            <?php $layoutConverted = str_replace( '_', '-', get_row_layout()); ?>
+            
+            @include('blocks.' . $layoutConverted)
 
         </div>
         @endwhile

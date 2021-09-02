@@ -1,0 +1,34 @@
+// ==========================================================================
+// # Hero
+// ==========================================================================
+
+
+.hero {
+    padding: 120px 0 90px;
+    
+    @screen md {
+        padding: 200px 0 90px;
+    }
+
+    &__skewedWrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #0e1117 0%, #0e1117 100%) repeat scroll 0 0;
+        
+        &-div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-bottom: 282px solid #fff;
+            border-left: 100vw solid transparent;
+        }
+    }
+  
+}

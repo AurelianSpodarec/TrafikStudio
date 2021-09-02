@@ -1,60 +1,7 @@
+// ==========================================================================
+// # Cheat - quick hot fixes
+// ==========================================================================
 
-
-.container {
-    @media (min-width: 1536px) {
-        max-width: 1280px!important;
-    }
-
-    &--xs {
-        max-width: 720px!important;
-    }
-}
-
-
-.tf-container {
-    &--sm {
-        max-width: 1040px;
-    }
-}
-
-
-.article {
-    h2 {
-        @apply text-4xl mt-4 mb-3
-    }
-    p {
-        @apply text-lg mb-2
-    }
-}
-
-
-.hero {
-    padding: 120px 0 90px;
-    @screen md {
-        padding: 200px 0 90px;
-    }
-    &__skewedWrapper {
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        overflow: hidden;
-        background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #0e1117 0%, #0e1117 100%) repeat scroll 0 0;
-        
-        &-div {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            border-bottom: 282px solid #fff;
-            border-left: 100vw solid transparent;
-        }
-    }
-  
-}
 
 
 .cta-link {
@@ -66,6 +13,13 @@
 
     font-size: 30px;
     text-align: center;
+
+    transition: background-color 350ms,transform 350ms,-webkit-transform 350ms;
+
+    &:hover {
+        transform: scale(.97);
+    }
+    
     @screen md {
         font-size: inherit;
         text-align: inherit;
@@ -86,13 +40,5 @@
         width: auto;
         color: white!important;
     }
+    
 }
-
-
-
-
- 
-
-// font-family: 'Lato', sans-serif;
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Roboto', sans-serif;

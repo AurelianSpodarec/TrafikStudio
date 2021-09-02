@@ -29,12 +29,23 @@
 
     <div class="flex flex-wrap work-list featured-work">
 
+        <?php $count = 0; ?>
         <?php if ( $query->have_posts() ) : ?>
         <?php while ($query->have_posts()) : $query->the_post(); ?>
 
-            <article class="work-item w-full md:w-1/3">
-            <a class="work-item__link" href="<?php the_permalink(); ?>">
-                <img src="https://d2jd1xj0qdoqs5.cloudfront.net/craft/uploads/Work/VFC/vfc_grid-third.jpg?mtime=20210120145955" />
+
+            
+            <article class="work-item  w-full md:w-1/3">
+            <a 
+                class="work-item__link work-item__excerpt-link"
+                data-aos="fade-up"
+                data-aos-delay="{{ 50 + $count * 100 }}" 
+                data-aos-duration="400"
+                data-aos-easing="ease-in-out"
+                data-aos-once="true"  
+                data-aos-offset="300" 
+                href="<?php the_permalink(); ?>
+            ">
                 <?php $client_term = get_the_terms(get_the_ID(), 'client_category'); ?>
                 <div class="work-item__inner">
                     <p class="work-item__client"><?php echo $client_term[0]->name ?></p>
@@ -45,16 +56,17 @@
 
                 <?php if ( $featured_video = get_field( 'featured_video',get_the_ID() ) ) : ?>
                     <video class="work-item__img" width="100%" autoplay muted loop>
-                        <source src=<?php echo $featured_video; ?> type="video/ogg">
+                        <source data-src=<?php echo $featured_video; ?> type="video/ogg">
                     </video>
                 <?php else: ?>
-                    <img class="work-item__img js-lazy is-active" src="<?php echo get_the_post_thumbnail_url() ?>" alt="To do">
+                    <img class="work-item__img js-lazy is-active" data-src="<?php echo get_the_post_thumbnail_url() ?>" alt="To do">
                 <?php endif; ?>
 
             </a>
             </article>
     
 
+        <?php $count++; ?>
         <?php endwhile; ?>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>

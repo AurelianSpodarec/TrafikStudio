@@ -3,19 +3,28 @@
 // ==========================================================================
 
 .service-excerpt {
-    background: white;
-    -webkit-transition: background-color 200ms linear;
-    -ms-transition: background-color 200ms linear;
-    transition: background-color 200ms linear;
+    background: white; 
+    -webkit-transition: transform 200ms ease-in-out;
+    -ms-transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
     box-shadow:
     0  5px 10px rgba(154,160,185,0.05),
     0 15px 40px rgba(166,173,201,0.2);
+
     &:hover {
-        background: linear-gradient(to right, #1be5ef, #00ced8, #30bfd6);//linear-gradient(to right, #f5aaaf,#faaaaa, #faa7a1);
-        // #34343f
-        color: white; 
-    -webkit-transition: background-color 200ms linear;
-    -ms-transition: background-color 200ms linear;
-    transition: background-color 200ms linear;
+        transform: translateY(1.7rem) scale(1.05);
+    }
+
+    &--other {
+        &:hover {
+            transform: translateY(-0.3rem) scale(1.05);
+        }
+    }
+
+    &__svg {
+        font-size: 3em;
+        height: 100px;
+        width: 80px;
+        fill: #02393c;
     }
 }

@@ -2,17 +2,30 @@
 
     
     <div class="flex flex-wrap">
-    <div class="w-full md:w-1/2">
-        <div class="px-8 md:px-0 md:pr-12">
-            <h2 class="heading text-3xl md:text-6xl font-bold text-white mb-6 mt-10 ">Make Your Website Your Best Salesperson</h2>
-            <p class="text-white mb-8" style="max-width: 479px;">We help companies refine their messaging, hone in their sales process, and grow their pipeline - all with a new website.</p>
-        
+    <div class="w-full md:w-1/2"
+       data-aos="fade-up"
+    >
+        <div class="px-8 md:px-0 md:pr-11">
+
+            <?php if ( $heading = get_sub_field( 'heading' ) ) : ?>
+            <h2 class="heading text-3xl md:text-6xl font-bold text-white mb-6 mt-10">
+                <?php echo esc_html( $heading ); ?>
+            </h2>
+            <?php endif; ?>
+            
+            <?php if ( $lead_text = get_sub_field( 'lead_text' ) ) : ?>
+                <p class="text-white mb-8" style="max-width: 479px;"><?php echo $lead_text; ?></p>
+            <?php endif; ?>
+            
             <x-button class="mb-8 w-full md:w-auto" size="md" variant="primary" kind="solid">Get free assesment</x-button>
         </div>
     </div>
 
-    <div class="w-full px-8 md:px-0 mx-auto mx:mx-inherit md:w-1/2">
-        <img class="rounded-2xl" src="https://images.unsplash.com/photo-1587355760421-b9de3226a046?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1051&q=80" />
+    <div class="w-full px-8 md:px-0 mx-auto mx:mx-inherit md:w-1/2"
+        data-aos="fade-up"
+        data-aos-delay="550"
+    >
+        <img class="rounded-2xl" data-src="<?php echo esc_url( get_sub_field( 'image' ) ); ?>" />
     </div>
     </div>
 

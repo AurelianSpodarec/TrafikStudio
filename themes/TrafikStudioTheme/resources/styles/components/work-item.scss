@@ -86,6 +86,8 @@
     }
 }
 
+
+
 //#151a24 - section
 .work-item {
     position: relative;
@@ -214,4 +216,13 @@
         height: 100%;
     }
 
+}
+
+
+.work-item__excerpt-link {
+    height: 280px!important;
+    
+    @screen md {
+        height: 600px!important;
+    }
 }

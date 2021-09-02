@@ -17,7 +17,9 @@
 // ==========================================================================
 // Common
 // ==========================================================================
+@import 'common/article';
 @import 'common/fonts';
+@import 'common/global';
 @import 'common/offcanvas-content';
 @import 'common/offcanvas-menu';
 @import 'common/scrollbar';
@@ -39,6 +41,7 @@
 @import 'components/featured-work';
 @import 'components/footer';
 @import 'components/header';
+@import 'components/hero';
 @import 'components/service-excerpt';
 @import 'components/work-item';
 
@@ -48,8 +51,3 @@
 // Other
 // ==========================================================================
 @import 'cheat';
-
- 
-body {
-    font-family: 'Buenos Aires';
-}

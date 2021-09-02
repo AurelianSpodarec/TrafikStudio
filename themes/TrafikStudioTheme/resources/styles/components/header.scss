@@ -3,13 +3,11 @@
 // ==========================================================================
 
 .header {
-    // background-color: #191a1a;
     
     &.is-sticky {
         background-color: white;
         box-shadow: 0 0 24px 6px rgb(0 0 0 / 10%);
     }
-
 
     &.menu-home {
        
@@ -22,36 +20,32 @@
     }
 
     // Desktop Menu
+ 
     &__desktop-nav {
         margin-left: auto;
     }
     &__desktop-menu {
-
         display: flex;
+
         & .menu-item {
             margin-left: 1.5rem;
+
             & a {
+                transition: color 350ms;
                 font-size: 1.125rem;
                 color: black;
+                &:hover {
+                    color: #05a7af;
+                }
             }
         }
 
         
     }
 
-   
-
-
-
-    
-
     // Mobile Menu
     &__mobile-menu {
         display: none;
     }
 
-}
-
-.header__desktop-menu a {
-    color: white;
 }
