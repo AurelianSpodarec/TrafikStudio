@@ -4,6 +4,8 @@
     <div class="flex flex-wrap">
     <div class="w-full md:w-1/2"
        data-aos="fade-up"
+       data-aos-offset="200"
+       data-aos-delay="50"
     >
         <div class="px-8 md:px-0 md:pr-11">
 
@@ -23,7 +25,8 @@
 
     <div class="w-full px-8 md:px-0 mx-auto mx:mx-inherit md:w-1/2"
         data-aos="fade-up"
-        data-aos-delay="550"
+        data-aos-offset="200"
+        data-aos-delay="500"
     >
         <img class="rounded-2xl" data-src="<?php echo esc_url( get_sub_field( 'image' ) ); ?>" />
     </div>

@@ -21,6 +21,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 	// below listed default settings
 	AOS.init({
 		duration: 1200,
+		
+		 
 	  })
 	  
 
