@@ -18,7 +18,7 @@
                             </g>
                         </g>
                     </svg>
-                    <h1 class="text-xl md:text-4xl uppercase font-bold {{ is_home() || is_front_page() ? "text-white" : "text-black" }} ">Trafik Studio</h1>
+                    <h1 class="text-xl md:text-4xl uppercase font-bold text-white">Trafik Studio</h1>
                 </div>
             </a>
 

@@ -8,7 +8,11 @@
 
 
 
-    <div class="w-full md:w-2/5 flex items-center" data-aos="fade-up">
+    <div 
+        class="w-full lg:w-2/5 flex items-center"
+        data-aos="fade-up"
+        data-aos-once="true"  
+    >
 
         <div class="px-4">
             <span class="text-red">Services</span>
@@ -21,11 +25,11 @@
     </div>
 
 
-    <div class="w-full md:w-3/5 md:pl-12" data-aos="fade-up">
-    <div class="grid gap-x-8 gap-y-8 md:grid-cols-2 px-4 md:px-0">
+    <div class="w-full lg:w-3/5 lg:pl-12" data-aos="fade-up">
+    <div class="grid gap-x-8 gap-y-8 lg:grid-cols-2 px-4 lg:px-0">
 
 
-        <div class="service-excerpt transform md:translate-y-4 bg-white rounded-xl">
+        <div class="service-excerpt transform lg:translate-y-4 bg-white rounded-xl">
         <div class="py-12 px-8">
             <svg class="service-excerpt__svg" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                 <path d="M43.4574 13.716C43.4574 13.271 43.0445 12.9236 42.719 12.9236C42.643 12.9236 42.567 12.9346 42.513 12.9781L39.7559 14.7688C39.5064 14.9318 39.4194 15.1923 39.4194 15.3767C39.4194 15.5612 39.5064 15.8217 39.7559 15.9846L42.513 17.7754C42.567 17.8189 42.643 17.8299 42.719 17.8299C43.0445 17.8299 43.4574 17.4825 43.4574 17.0375C43.4574 16.853 43.3814 16.6901 43.2619 16.6141L41.3512 15.3767L43.2619 14.1394C43.3809 14.0634 43.4574 13.9005 43.4574 13.716Z" ></path>
@@ -39,7 +43,7 @@
         </div>
         </div>
 
-        <div class="service-excerpt service-excerpt--other transform md:-translate-y-4 bg-white rounded-xl">
+        <div class="service-excerpt service-excerpt--other transform lg:-translate-y-4 bg-white rounded-xl">
         <div class="py-12 px-8">
         
             <svg class="service-excerpt__svg" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +61,7 @@
         </div>
         </div>
 
-        <div class="service-excerpt transform md:translate-y-4 bg-white rounded-xl">
+        <div class="service-excerpt transform lg:translate-y-4 bg-white rounded-xl">
         <div class="py-12 px-8">
 
             <svg class="service-excerpt__svg" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +85,7 @@
         </div>
         </div>
 
-        <div class="service-excerpt service-excerpt--other transform md:-translate-y-4 bg-white rounded-xl">
+        <div class="service-excerpt service-excerpt--other transform lg:-translate-y-4 bg-white rounded-xl">
         <div class="py-12 px-8">
             {{-- <svg class="w-20 mb-10" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shield" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-shield fa-w-16 fa-2x"><path fill="currentColor" d="M237.5 508.3c11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3zM256 48l192 80c0 173.8-98.4 297-192 336-97.5-40.6-192-166.7-192-336l192-80z" class=""></path></svg> --}}
             <img class="w-20 mb-10" src="https://img.icons8.com/dotty/80/000000/shield.png"/>

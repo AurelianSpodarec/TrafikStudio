@@ -35,7 +35,7 @@
 
 
             
-            <article class="work-item  w-full md:w-1/3">
+            <article class="work-item  w-full lg:w-1/3">
             <a 
                 class="work-item__link work-item__excerpt-link"
                 data-aos="fade-up"
@@ -43,7 +43,7 @@
                 data-aos-duration="400"
                 data-aos-easing="ease-in-out"
                 data-aos-once="true"  
-                data-aos-offset="300" 
+                data-aos-offset="200" 
                 href="<?php the_permalink(); ?>
             ">
                 <?php $client_term = get_the_terms(get_the_ID(), 'client_category'); ?>

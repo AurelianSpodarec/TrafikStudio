@@ -1,5 +1,3 @@
-
-{{-- <body class="bg-gray-800 text-gray-100 px-8 py-12"> --}}
 <div class="py-16">
       <div class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div class="flex flex-col justify-between">
@@ -508,36 +506,88 @@
             </svg>
           </div>
         </div>
-        <div class="">
+
+
+        <?php echo do_shortcode( '[contact-form-7 id="263" title="Contact Form"]'); ?>
+ 
+
+        {{-- 
+          // DO NOT DELETE
+          // Used as a template with code for contact form 7 plugin
+         --}}
+
+
+{{-- <form>
+<div>
+    <span class="contat-form__name">Full Name</span>
+    [text* text-967 class:contact-form__input]
+</div>
+
+<div class="mt-8">
+    <span class="contat-form__name">Email</span>
+    [email* email-555 class:contact-form__input]
+</div>
+
+<div class="mt-8">
+   <span class="contat-form__name">Subject</span>
+   <div class="contact-form__select-wrapper">
+       [select menu-449 class:contact-form__select class:contact-form__input "Business" "Media" "Hello" "Other"]
+   </div>
+</div>
+
+
+<div class="mt-8">
+    <span class="contat-form__name">Message</span>
+    [textarea* textarea-742 class:h-48 class:contact-form__input]
+</div>
+
+<div class="mt-8"> 
+    [submit "Send Message" class: contact-form__button]
+</div>
+
+
+
+
           <div>
-            <span class="uppercase text-sm text-gray-600 font-bold">Full Name</span>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" placeholder="">
+            <span class="contat-form__name">Full Name</span>
+            <input class="contact-form__input" type="text" placeholder="">
           </div>
+
+
           <div class="mt-8">
-            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text">
+            <span class="contat-form__name">Email</span>
+            <input class="contact-form__input" type="text">
           </div>
+
           <div class="mt-8">
-            <span class="uppercase text-sm text-gray-600 font-bold">Subject</span>
-            <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              type="text" placeholder="make this a dropdown">
+            <span class="contat-form__name">Subject</span>
+              <div class="contact-form__select-wrapper">
+                <select class="contact-form__select contact-form__input">
+                  <option value="select">Select</option>
+                  <option value="business">Business</option>
+                  <option value="media">Media</option>
+                  <option value="hello">Saying hello!</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
           </div>
+
+
           <div class="mt-8">
-            <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-            <textarea
-              class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+            <span class="contat-form__name">Message</span>
+            <textarea class="h-48  contact-form__input"></textarea>
           </div>
-          <div class="mt-8">
-            <button
-            style="background-color: #05a7af;"
-              class="uppercase text-sm font-bold tracking-wide  text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-              Send Message
+
+
+          <div class="mt-8"> 
+            <button type="button" class="contact-form__button">
+             Send Message
             </button>
           </div>
-        </div>
-      </div>
-    {{-- </body> --}}
 
+
+        </form> --}}
+
+
+      </div>
     </div>

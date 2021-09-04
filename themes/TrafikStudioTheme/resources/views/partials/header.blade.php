@@ -1,5 +1,5 @@
-<header class="js-header header px-6 md:px-0 z-40 {{ is_home() || is_front_page() ? "absolute menu-home" : "static" }} top-0 left-0 right-0">
-<div class="container mx-auto  py-6 md:pt-2 md:pb-10 flex items-center">
+<header class="js-header header px-6 lg:px-0 z-40 {{ is_home() || is_front_page() ? "absolute menu-home" : "static" }} top-0 left-0 right-0">
+<div class="container mx-auto  py-6 lg:pt-2 lg:pb-10 flex items-center">
 
 
     <a class="text-white" href="{{ home_url('/') }}">
@@ -16,12 +16,12 @@
                     </g>
                 </g>
             </svg>
-            <h1 class="text-xl md:text-4xl uppercase font-bold {{ is_home() || is_front_page() ? "text-white" : "text-black" }} ">Trafik Studio</h1>
+            <h1 class="text-xl lg:text-4xl uppercase font-bold {{ is_home() || is_front_page() ? "text-white" : "text-black" }} ">Trafik Studio</h1>
         </div>
     </a>
 
 
-    <button class="burger-button p-2 ml-auto js-toggle-menu block md:hidden js-openMenuButton">
+    <button class="burger-button p-2 ml-auto js-toggle-menu block lg:hidden js-openMenuButton">
        
             <i class="uk-navbar-toggle uk-navbar-toggle-icon uk-light">
                 <span class="burger-icon js-burger-icon"></span>
@@ -29,7 +29,7 @@
      
     </button>
 
-    <nav id="desktop-nav" class="header__desktop-nav hidden md:block">
+    <nav id="desktop-nav" class="header__desktop-nav hidden lg:block">
     @if (has_nav_menu('main_menu'))
         {!! wp_nav_menu([
         'theme_location' => 'main_menu', 

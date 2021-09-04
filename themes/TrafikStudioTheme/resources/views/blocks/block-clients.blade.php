@@ -1,4 +1,4 @@
-<div class="grid gap-x-8 gap-y-12 grid-cols-2 px-8 md:px-0  md:flex flex-wrap justify-between">
+<div class="grid gap-x-8 mx-12 gap-y-12 grid-cols-2 px-8 lg:px-0  lg:flex flex-wrap justify-between">
 
 <?php $count = 0; ?>
   <?php if ( have_rows( 'clients' ) ) : ?>
@@ -12,7 +12,7 @@
         data-aos-easing="ease-in-out"
         data-aos-once="true"  
         
-        class="mx-auto md:mx-0" style="max-height: 55px" data-src="<?php echo esc_url( get_sub_field( 'image' ) ); ?>" alt="Image" />
+        class="mx-auto lg:mx-0" style="max-height: 55px" data-src="<?php echo esc_url( get_sub_field( 'image' ) ); ?>" alt="Image" />
       
       <?php $count++; ?>
     <?php endwhile; ?>

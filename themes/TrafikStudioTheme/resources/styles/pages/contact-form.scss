@@ -1,0 +1,53 @@
+// ==========================================================================
+// # Pages: Contact Form
+// ==========================================================================
+
+
+.contact-form {
+
+    &__name {
+        @apply uppercase text-sm text-gray-600 font-bold;
+    }
+
+    &__input {
+        @apply w-full bg-gray-200 text-gray-900 mt-2 p-3;
+    
+        &:focus {
+            @apply bg-gray-300 outline-none;
+        }
+    }
+
+      &__select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+      
+        // Hack for IE 11+
+        &::-ms-expand {
+          display: none;
+        }
+    }
+
+    &__select-wrapper {
+        position: relative;
+        width: 100%;
+        // Dropdown icon
+        &::after {
+            color: black;
+            content: "▾";
+            margin-right: 10px;
+            pointer-events: none;
+            position: absolute;
+            right: 5px;
+            margin-top: 5px;
+            font-size: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__button {
+        @apply button w-full md:w-auto button-primary button-solid button-medium md:w-full button-solid button-primary;
+        
+    }
+
+}
